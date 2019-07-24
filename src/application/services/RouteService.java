@@ -114,11 +114,11 @@ public class RouteService {
     }
 
     public void reset() {
-    	//markerManager.restoreMarkers();
-    	//routeLine = null;
-//    	markerManager.clearMarkers();
-//    	markerManager.restoreMarkers();
-//      removeRouteLine();
+    	markerManager.restoreMarkers();
+    	routeLine = null;
+    	markerManager.clearMarkers();
+    	markerManager.restoreMarkers();
+      removeRouteLine();
     }
 
     public boolean isRouteDisplayed() {
@@ -173,7 +173,7 @@ public class RouteService {
                     				markerManager.getDataSet().getGraph().bfs(start, 
                     														  stop, 
                     														  nodeAccepter);
-                			color = "red";
+                			color = "purple";
             			}
             			else if (toggle == RouteController.DIJ) {
             				
@@ -231,7 +231,7 @@ public class RouteService {
             																		  stops, 
             																		  nodeAccepter, 
             																		  new HashMap<Double,HashMap<Double,Integer>>());
-            			color = "purple";
+            			color = "red";
             		}
             		else {
             			

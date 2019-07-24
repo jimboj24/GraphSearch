@@ -405,11 +405,11 @@ public class MapApp extends Application
 	  rbA.setUserData("A*");
 
 	  RadioButton rbB = new RadioButton("BFS");
-	  rbB.setTextFill(Paint.valueOf("red"));
+	  rbB.setTextFill(Paint.valueOf("purple"));
 	  rbB.setUserData("BFS");
 	  
 	  RadioButton rbGreedyTSP = new RadioButton("GreedyTSP");
-	  rbGreedyTSP.setTextFill(Paint.valueOf("purple"));
+	  rbGreedyTSP.setTextFill(Paint.valueOf("red"));
 	  rbGreedyTSP.setUserData("GreedyTSP");
 	  
 	 // RadioButton rbGreedy2OptTSP = new RadioButton("Greedy2OptTSP");

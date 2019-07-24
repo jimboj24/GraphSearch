@@ -30,13 +30,17 @@ public class GeographicPoint extends Double {
     	double lat2rad = Math.toRadians(lat2);
     	double deltaLat = Math.toRadians(lat2-lat1);
     	double deltaLon = Math.toRadians(lon2-lon1);
+    	double hn = Math.random() *  5;
 
     	double a = Math.sin(deltaLat/2) * Math.sin(deltaLat/2) +
     	        Math.cos(lat1rad) * Math.cos(lat2rad) *
     	        Math.sin(deltaLon/2) * Math.sin(deltaLon/2);
     	double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-
-    	double d = R * c;
+    	
+    	double d = R * c + hn; //(Math.random() * 1 + 5); //Add heuristics f(n)=g(n)+h(n)
+    	System.out.print("Heutistic values: ");
+    	System.out.println(hn);
+    	
     	return d;
     }
     
